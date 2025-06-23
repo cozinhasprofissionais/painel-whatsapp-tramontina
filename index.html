@@ -2,45 +2,44 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8" />
-<title>Contatos Tramontina-Farroupilha</title>
+<title>Contatos Tramontina</title>
 <style>
   body { font-family: Arial, sans-serif; padding: 20px; background: #ADD8E6; }
   h1 { text-align: center; }
-  .contact-card {
-    background: white;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: 10px auto;
-    width: 320px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  }
+  .contact-card { background: white; border: 1px solid #ddd; padding: 15px; margin: 10px auto; width: 320px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
   .contact-card h2 { margin: 0 0 5px; font-size: 18px; }
   .contact-card p { margin: 2px 0; }
-  .contact-card a, .contact-card button {
-    display: inline-block;
-    padding: 8px 12px;
-    border-radius: 4px;
-    text-decoration: none;
-    color: #fff;
-    margin-top: 8px;
-    border: none;
-    cursor: pointer;
-  }
+  .contact-card a, .contact-card button { display: inline-block; padding: 8px 12px; border-radius: 4px; text-decoration: none; color: #fff; margin-top: 8px; border: none; cursor: pointer; }
   .contact-card .wa { background: #25D366; }
   .contact-card .info-btn { background: #007BFF; margin-left: 8px; }
-  .contact-card .wa:hover { background: #1ebe57; }
-  .contact-card .info-btn:hover { background: #006FDD; }
+  .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: none; align-items: center; justify-content: center; }
+  .modal { background: white; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+  .modal h3 { margin-top: 0; }
+  .modal button { background: #007BFF; color: white; padding: 6px 12px; border: none; border-radius: 4px; cursor: pointer; }
 </style>
-<script>
-function showContact(name, role, email, phone) {
-  alert(`Contato:\n\nNome: ${name}\nFunção: ${role}\nEmail: ${email}\nTelefone: ${phone}`);
-}
-</script>
 </head>
 <body>
 <h1>Contatos Tramontina</h1>
 
+<div id="modalOverlay" class="modal-overlay">
+  <div class="modal">
+    <h3>Contato</h3>
+    <p id="modalContent"></p>
+    <button onclick="closeModal()">Fechar</button>
+  </div>
+</div>
+
+<script>
+function showContact(name, role, email, phone) {
+  document.getElementById('modalContent').innerText = `Nome: ${name}\nFunção: ${role}\nEmail: ${email}\nTelefone: ${phone}`;
+  document.getElementById('modalOverlay').style.display = 'flex';
+}
+function closeModal() {
+  document.getElementById('modalOverlay').style.display = 'none';
+}
+</script>
+
+<!-- Contatos -->
 <div class="contact-card">
   <h2>Thais</h2>
   <p>Abertura ordens de serviço<br>Email: atendimentocozinhas.far@tramontina.com</p>
@@ -72,7 +71,7 @@ function showContact(name, role, email, phone) {
 <div class="contact-card">
   <h2>Lucas</h2>
   <p>Promotor técnico Sudeste/Nordeste<br>Email: lucas.bing@tramontina.com</p>
-  <a href="https://wa.me/5554981536011" class="wa" target="_blank">Chamar no WhatsApp</a>
+  <a href="https://wa.me/555498153607" class="wa" target="_blank">Chamar no WhatsApp</a>
   <button class="info-btn" onclick="showContact('Lucas', 'Promotor técnico Sudeste/Nordeste', 'lucas.bing@tramontina.com', '+55(54)9815-3607')">Mostrar Contato</button>
 </div>
 
@@ -94,21 +93,21 @@ function showContact(name, role, email, phone) {
   <h2>Josué</h2>
   <p>Promotor técnico SP<br>Email: josue.rocha@tramontina.com</p>
   <a href="https://wa.me/5511914995839" class="wa" target="_blank">Chamar no WhatsApp</a>
-  <button class="info-btn" onclick="showContact('Josué', 'Promotor técnico SP', 'josue.rocha@tramontina.com', '+55(11)91499-5839')">Mostrar Contato</button>
+  <button class="info-btn" onclick="showContact('Josué', 'Promotor técnico SP', 'josue.rocha@tramontina.com', '+55(11)991499-5839')">Mostrar Contato</button>
 </div>
 
 <div class="contact-card">
   <h2>Daniel</h2>
   <p>Suporte técnico peças e site<br>Email: daniel.zavalhia@tramontina.com</p>
   <a href="https://wa.me/555491569603" class="wa" target="_blank">Chamar no WhatsApp</a>
-  <button class="info-btn" onclick="showContact('Daniel', 'Suporte técnico peças e site', 'daniel.zavalhia@tramontina.com', '+55(54)99156-9603')">Mostrar Contato</button>
+  <button class="info-btn" onclick="showContact('Daniel', 'Suporte técnico peças e site', 'daniel.zavalhia@tramontina.com', '+55(54)9156-9603')">Mostrar Contato</button>
 </div>
 
 <div class="contact-card">
   <h2>Alexandre</h2>
   <p>Supervisor de pós vendas<br>Email: alexandre.contini@tramontina.com</p>
   <a href="https://wa.me/5554991157713" class="wa" target="_blank">Chamar no WhatsApp</a>
-  <button class="info-btn" onclick="showContact('Alexandre', 'Supervisor de pós vendas', 'alexandre.contini@tramontina.com', '+55(54)99115-7713')">Mostrar Contato</button>
+  <button class="info-btn" onclick="showContact('Alexandre', 'Supervisor de pós vendas', 'alexandre.contini@tramontina.com', '+55(54)991157713')">Mostrar Contato</button>
 </div>
 
 </body>
