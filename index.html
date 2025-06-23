@@ -17,19 +17,26 @@
   }
   .contact-card h2 { margin: 0 0 5px; font-size: 18px; }
   .contact-card p { margin: 2px 0; }
-  .contact-card a {
+  .contact-card a, .contact-card button {
     display: inline-block;
     padding: 8px 12px;
     border-radius: 4px;
     text-decoration: none;
     color: #fff;
     margin-top: 8px;
+    border: none;
+    cursor: pointer;
   }
   .contact-card .wa { background: #25D366; }
-  .contact-card .call { background: #007BFF; margin-left: 8px; }
+  .contact-card .info-btn { background: #007BFF; margin-left: 8px; }
   .contact-card .wa:hover { background: #1ebe57; }
-  .contact-card .call:hover { background: #006FDD; }
+  .contact-card .info-btn:hover { background: #006FDD; }
 </style>
+<script>
+function showContact(name, role, email, phone) {
+  alert(`Contato:\n\nNome: ${name}\nFunção: ${role}\nEmail: ${email}\nTelefone: ${phone}`);
+}
+</script>
 </head>
 <body>
 <h1>Contatos Tramontina</h1>
@@ -38,70 +45,70 @@
   <h2>Thais</h2>
   <p>Abertura ordens de serviço<br>Email: atendimentocozinhas.far@tramontina.com</p>
   <a href="https://wa.me/5554981536033" class="wa" target="_blank">Chamar no WhatsApp</a>
-  <a href="tel:+5554981536033" class="call">Ligar para o Contato</a>
+  <button class="info-btn" onclick="showContact('Thais', 'Abertura ordens de serviço', 'atendimentocozinhas.far@tramontina.com', '+5554981536033')">Mostrar Contato</button>
 </div>
 
 <div class="contact-card">
   <h2>Adalberto</h2>
   <p>Suporte técnico ordens de serviço<br>Email: adalberto.souto@tramontina.com</p>
   <a href="https://wa.me/5554992437871" class="wa" target="_blank">Chamar no WhatsApp</a>
-  <a href="tel:+5554992437871" class="call">Ligar para o Contato</a>
+  <button class="info-btn" onclick="showContact('Adalberto', 'Suporte técnico ordens de serviço', 'adalberto.souto@tramontina.com', '+5554992437871')">Mostrar Contato</button>
 </div>
 
 <div class="contact-card">
   <h2>Patrícia</h2>
   <p>Abertura ordens instalação<br>Email: atendimentocozinhas.far@tramontina.com</p>
   <a href="https://wa.me/5554991405949" class="wa" target="_blank">Chamar no WhatsApp</a>
-  <a href="tel:+5554991405949" class="call">Ligar para o Contato</a>
+  <button class="info-btn" onclick="showContact('Patrícia', 'Abertura ordens instalação', 'atendimentocozinhas.far@tramontina.com', '+5554991405949')">Mostrar Contato</button>
 </div>
 
 <div class="contact-card">
   <h2>Mauricio</h2>
   <p>Suporte técnico ordens instalação<br>Email: mauricio.lima@tramontina.com</p>
   <a href="https://wa.me/5554992057821" class="wa" target="_blank">Chamar no WhatsApp</a>
-  <a href="tel:+5554992057821" class="call">Ligar para o Contato</a>
+  <button class="info-btn" onclick="showContact('Mauricio', 'Suporte técnico ordens instalação', 'mauricio.lima@tramontina.com', '+5554992057821')">Mostrar Contato</button>
 </div>
 
 <div class="contact-card">
   <h2>Lucas</h2>
   <p>Promotor técnico Sudeste/Nordeste<br>Email: lucas.bing@tramontina.com</p>
   <a href="https://wa.me/555498153607" class="wa" target="_blank">Chamar no WhatsApp</a>
-  <a href="tel:+555498153607" class="call">Ligar para o Contato</a>
+  <button class="info-btn" onclick="showContact('Lucas', 'Promotor técnico Sudeste/Nordeste', 'lucas.bing@tramontina.com', '+555498153607')">Mostrar Contato</button>
 </div>
 
 <div class="contact-card">
   <h2>Rafael</h2>
   <p>Promotor técnico Sul/CO/Norte<br>Email: rafael.silva@tramontina.com</p>
   <a href="https://wa.me/5554991012025" class="wa" target="_blank">Chamar no WhatsApp</a>
-  <a href="tel:+5554991012025" class="call">Ligar para o Contato</a>
+  <button class="info-btn" onclick="showContact('Rafael', 'Promotor técnico Sul/CO/Norte', 'rafael.silva@tramontina.com', '+5554991012025')">Mostrar Contato</button>
 </div>
 
 <div class="contact-card">
   <h2>Robson</h2>
   <p>Suporte técnico SP<br>Email: robson.menezes@tramontina.com</p>
   <a href="https://wa.me/5511961718289" class="wa" target="_blank">Chamar no WhatsApp</a>
-  <a href="tel:+5511961718289" class="call">Ligar para o Contato</a>
+  <button class="info-btn" onclick="showContact('Robson', 'Suporte técnico SP', 'robson.menezes@tramontina.com', '+5511961718289')">Mostrar Contato</button>
 </div>
 
 <div class="contact-card">
   <h2>Josué</h2>
   <p>Promotor técnico SP<br>Email: josue.rocha@tramontina.com</p>
   <a href="https://wa.me/5511914995839" class="wa" target="_blank">Chamar no WhatsApp</a>
-  <a href="tel:+5511914995839" class="call">Ligar para o Contato</a>
+  <button class="info-btn" onclick="showContact('Josué', 'Promotor técnico SP', 'josue.rocha@tramontina.com', '+5511914995839')">Mostrar Contato</button>
 </div>
 
 <div class="contact-card">
   <h2>Daniel</h2>
   <p>Suporte técnico peças e site<br>Email: daniel.zavalhia@tramontina.com</p>
   <a href="https://wa.me/555491569603" class="wa" target="_blank">Chamar no WhatsApp</a>
-  <a href="tel:+555491569603" class="call">Ligar para o Contato</a>
+  <button class="info-btn" onclick="showContact('Daniel', 'Suporte técnico peças e site', 'daniel.zavalhia@tramontina.com', '+555491569603')">Mostrar Contato</button>
 </div>
 
 <div class="contact-card">
   <h2>Alexandre</h2>
   <p>Supervisor de pós vendas<br>Email: alexandre.contini@tramontina.com</p>
   <a href="https://wa.me/5549991157713" class="wa" target="_blank">Chamar no WhatsApp</a>
-  <a href="tel:+5549991157713" class="call">Ligar para o Contato</a>
+  <button class="info-btn" onclick="showContact('Alexandre', 'Supervisor de pós vendas', 'alexandre.contini@tramontina.com', '+5549991157713')">Mostrar Contato</button>
 </div>
 
 </body>
