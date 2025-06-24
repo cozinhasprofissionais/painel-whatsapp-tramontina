@@ -5,7 +5,7 @@
 <title>Contatos Tramontina Farroupilha</title>
 <style>
   body { font-family: Arial, sans-serif; padding: 20px; background: #000; color: #fff; }
-  h1, h2 { text-align: center; color: #fff; }
+  h1 { text-align: center; color: #fff; }
   .contact-card { background: white; color: black; border: 1px solid #ddd; padding: 15px; margin: 10px auto; width: 320px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
   .contact-card h2 { margin: 0 0 5px; font-size: 18px; color: black; }
   .contact-card p { margin: 2px 0; }
@@ -16,10 +16,12 @@
   .modal { background: white; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
   .modal h3 { margin-top: 0; color: black; }
   .modal button { background: #007BFF; color: white; padding: 6px 12px; border: none; border-radius: 4px; cursor: pointer; }
+  .logo { display: block; margin: 10px auto; max-width: 200px; }
 </style>
 </head>
 <body>
 <h1>Contatos Tramontina Farroupilha</h1>
+<img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/2/24/Tramontina_logo.png" alt="Logotipo Tramontina" />
 
 <div id="modalOverlay" class="modal-overlay">
   <div class="modal">
@@ -39,7 +41,8 @@ function closeModal() {
 }
 </script>
 
-<h2>Serviços</h2>
+<!-- Todos os 10 contatos -->
+<!-- Serviços -->
 <div class="contact-card">
   <h2>Thais</h2>
   <p>Abertura ordens de serviço<br>Email: atendimentocozinhas.far@tramontina.com</p>
@@ -49,11 +52,11 @@ function closeModal() {
 <div class="contact-card">
   <h2>Adalberto</h2>
   <p>Suporte técnico ordens de serviço<br>Email: adalberto.souto@tramontina.com</p>
-  <a href="https://wa.me/555492437871" class="wa" target="_blank">Chamar no WhatsApp</a>
+  <a href="https://wa.me/5554992437871" class="wa" target="_blank">Chamar no WhatsApp</a>
   <button class="info-btn" onclick="showContact('Adalberto', 'Suporte técnico ordens de serviço', 'adalberto.souto@tramontina.com', '+55(54)99243-7871')">Mostrar Contato</button>
 </div>
 
-<h2>Instalação</h2>
+<!-- Instalação -->
 <div class="contact-card">
   <h2>Patrícia</h2>
   <p>Abertura ordens instalação<br>Email: atendimentocozinhas.far@tramontina.com</p>
@@ -67,7 +70,7 @@ function closeModal() {
   <button class="info-btn" onclick="showContact('Mauricio', 'Suporte técnico ordens instalação', 'mauricio.lima@tramontina.com', '+55(54)99205-7821')">Mostrar Contato</button>
 </div>
 
-<h2>Promotores</h2>
+<!-- Promotores -->
 <div class="contact-card">
   <h2>Lucas</h2>
   <p>Promotor técnico Sudeste/Nordeste<br>Email: lucas.bing@tramontina.com</p>
@@ -76,12 +79,12 @@ function closeModal() {
 </div>
 <div class="contact-card">
   <h2>Rafael</h2>
-  <p>Promotor técnico Sul/Centro-Oeste/Norte<br>Email: rafael.silva@tramontina.com</p>
+  <p>Promotor técnico Sul/CO/Norte<br>Email: rafael.silva@tramontina.com</p>
   <a href="https://wa.me/5554991012025" class="wa" target="_blank">Chamar no WhatsApp</a>
   <button class="info-btn" onclick="showContact('Rafael', 'Promotor técnico Sul/CO/Norte', 'rafael.silva@tramontina.com', '+55(54)99101-2025')">Mostrar Contato</button>
 </div>
 
-<h2>Filial SP</h2>
+<!-- SP -->
 <div class="contact-card">
   <h2>Robson</h2>
   <p>Suporte técnico SP<br>Email: robson.menezes@tramontina.com</p>
@@ -95,7 +98,7 @@ function closeModal() {
   <button class="info-btn" onclick="showContact('Josué', 'Promotor técnico SP', 'josue.rocha@tramontina.com', '+55(11)91499-5839')">Mostrar Contato</button>
 </div>
 
-<h2>Peças</h2>
+<!-- Peças -->
 <div class="contact-card">
   <h2>Daniel</h2>
   <p>Suporte técnico peças e site<br>Email: daniel.zavalhia@tramontina.com</p>
@@ -103,7 +106,7 @@ function closeModal() {
   <button class="info-btn" onclick="showContact('Daniel', 'Suporte técnico peças e site', 'daniel.zavalhia@tramontina.com', '+55(54)91569-603')">Mostrar Contato</button>
 </div>
 
-<h2>Supervisor</h2>
+<!-- Supervisor -->
 <div class="contact-card">
   <h2>Alexandre</h2>
   <p>Supervisor de pós vendas<br>Email: alexandre.contini@tramontina.com</p>
@@ -113,5 +116,4 @@ function closeModal() {
 
 </body>
 </html>
-
 
