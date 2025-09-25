@@ -20,7 +20,13 @@
 </style>
 </head>
 <body>
-<img class="logo" src="https://raw.https://github.com/cozinhasprofissionais/painel-whatsapp-tramontina/blob/main/Tramontina_Horizontal_Negativa_RGB.png" alt="Logotipo Tramontina" style="display:block;margin:10px auto;max-width:400px;"/>
+
+<img class="logo"
+     src="https://raw.githubusercontent.com/cozinhasprofissionais/painel-whatsapp-tramontina/main/Tramontina_Horizontal_Negativa_RGB.png"
+     alt="Logotipo Tramontina"
+     style="display:block;margin:10px auto;max-width:400px;height:auto;"
+     onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/cozinhasprofissionais/painel-whatsapp-tramontina/main/Tramontina_Horizontal_RGB.png';" />
+
 <h1>Contatos Tramontina Farroupilha</h1>
 
 <div id="modalOverlay" class="modal-overlay">
@@ -33,7 +39,11 @@
 
 <script>
 function showContact(name, role, email, phone) {
-  document.getElementById('modalContent').innerHTML = '<b>Nome:</b> ' + name + '<br><b>Função:</b> ' + role + '<br><b>Email:</b> ' + email + '<br><b>Telefone:</b> ' + phone;
+  document.getElementById('modalContent').innerHTML =
+    '<b>Nome:</b> ' + name +
+    '<br><b>Função:</b> ' + role +
+    '<br><b>Email:</b> ' + email +
+    '<br><b>Telefone:</b> ' + phone;
   document.getElementById('modalOverlay').style.display = 'flex';
 }
 function closeModal() {
@@ -97,8 +107,5 @@ function closeModal() {
   <button class="info-btn" onclick="showContact('Daniel', 'Suporte técnico peças e site', 'daniel.zavalhia@tramontina.com', '+55(54)99156-9603')">Mostrar Contato</button>
 </div>
 
-
 </body>
 </html>
-
-
